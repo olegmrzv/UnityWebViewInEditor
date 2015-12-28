@@ -1,5 +1,5 @@
 ###WebWindow
-Example window with method helloFromJS, that called from js (see /index.html)
+Example window with method helloFromJS, which is called from js (see /index.html)
 
 1) For recieving events from js  
 Create any ScriptableObject and call WebView.defineScriptObject("someName", scriptableobject)    
