@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		   body{
+			background-color: #ffffff;
+		   } 
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			$("button").click(function(){
+				window.unityAsync({
+					className:"window.unityScriptObject", 
+					funcName:"helloFromJS", 
+					funcArgs:[$("#test").val()],
+					onSuccess:function(a){
+						$("#unity").text("Message from unity: " + a);
+					}
+				});
+			});
+		});
+
+		</script>
+	</head>
+	<body>
+
+		<button>Say hello to unity!</button>
+		<p>Message: <input type="text" id="test" value="hello, csharp"></p>
+		<p id="unity">Message from unity: </p>
+
+	</body>
+</html>
